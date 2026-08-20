@@ -11,7 +11,7 @@
       },
       {
         "name": "Paytm",
-        "scheme": "paytm://",
+        "scheme": "paytmmp://",
         "icon": "paytmpay"
       },
       {

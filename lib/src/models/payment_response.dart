@@ -1,25 +1,23 @@
-import 'package:meta/meta.dart';
-
 /// Represents a payment response from the PayPhi SDK
 class PaymentResponse {
   /// The status code of the response
   final String? statusCode;
-  
+
   /// The status message
   final String? statusMessage;
-  
+
   /// The transaction ID
   final String? transactionId;
-  
+
   /// The payment ID
   final String? paymentId;
-  
+
   /// The amount that was processed
   final String? amount;
-  
+
   /// The currency code
   final String? currencyCode;
-  
+
   /// Any additional parameters
   final Map<String, dynamic>? additionalParams;
 
@@ -63,7 +61,8 @@ class PaymentResponse {
   String toString() => 'PaymentResponse(${toJson()})';
 
   /// Checks if the response indicates a successful payment
-  bool get isSuccess => statusCode == '0' || statusCode?.toLowerCase() == 'success';
+  bool get isSuccess =>
+      statusCode == '0' || statusCode?.toLowerCase() == 'success';
 
   /// Gets the status code as an integer
   int? get statusCodeAsInt => int.tryParse(statusCode ?? '');
